@@ -1,0 +1,18 @@
+[package]
+name = "twitch-badge-parser-rs"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Twitch badge fetcher for Rust"
+repository = "https://github.com/b0zk/twitch-badge-parser-rs"
+
+[dependencies]
+http = "1.4.2"
+moka = { version = "0.12.15", features = ["sync"] }
+twitch-irc-rs = { git = "https://github.com/b0zk/twitch-irc-rs" }
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+
+[build]
+jobs = 8
