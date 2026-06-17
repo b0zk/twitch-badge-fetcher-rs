@@ -2,7 +2,7 @@ use twitch_badge_parser_rs::TwitchBadgeParser;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let parser = TwitchBadgeParser::new("token", "client-id").await?;
+    let parser = TwitchBadgeFetcher::new("token", "client-id").await?;
 
     let badge1 = parser.get("zevent25");
     parser.add_channel("80585512").await?;
