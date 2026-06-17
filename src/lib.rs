@@ -6,7 +6,7 @@ use std::sync::{Arc, Mutex};
 use std::time::Duration;
 use std::vec;
 
-pub struct TwitchBadgeParser {
+pub struct TwitchBadgeFetcher {
     cache: Cache<String, Arc<CachedBadge>>,
     channel_index: Mutex<HashMap<String, Vec<String>>>,
     token: String,
@@ -49,7 +49,7 @@ pub struct BadgeResponse {
     pub data: Vec<TwitchBadge>,
 }
 
-impl TwitchBadgeParser {
+impl TwitchBadgeFetcher {
     pub async fn new(token: &str, client_id: &str) -> Result<Self, reqwest::Error> {
         let client = Client::new();
 
