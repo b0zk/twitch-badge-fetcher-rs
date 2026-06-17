@@ -1,5 +1,5 @@
 [package]
-name = "twitch-badge-parser-rs"
+name = "twitch-badge-fetcher-rs"
 version = "0.1.0"
 edition = "2024"
 license = "MIT"
